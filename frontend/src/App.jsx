@@ -1,20 +1,23 @@
 import { Routes, Route } from "react-router-dom";
-import Navbar from "./components/Header.jsx";
-import Hero from "./components/Hero.jsx";
-import Footer from "./components/Footer.jsx";
-import Materials from "./pages/Materials.jsx";
-import AddMaterial from "./pages/AddMaterial.jsx";
-
+import Home from "./pages/Home.jsx";
+import PostMaterial from "./pages/PostMaterial.jsx";
+import Marketplace from './pages/Marketplace';
+import Enterprise from './pages/Enterprise';
+import ImpactTracker from './pages/ImpactTracker';
+import MaterialDetail from './pages/MaterialDetail';
 export default function App() {
   return (
     <>
-      <Navbar />
+      
       <Routes>
-        <Route path="/" element={<Hero />} />
-        <Route path="/materials" element={<Materials />} />
-        <Route path="/add" element={<AddMaterial />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/add" element={<PostMaterial />} />
+        <Route path="/materials" element={<Marketplace />} />
+        <Route path="/enterprise" element={<Enterprise />} />
+        <Route path="/impact" element={<ImpactTracker />} />
+        <Route path="/material/:id" element={<MaterialDetail />} />
       </Routes>
-      <Footer />
+      
     </>
   );
 }

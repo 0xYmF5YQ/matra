@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, BarChart3, Recycle, ShieldCheck, MapPin } from 'lucide-react';
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -34,9 +35,11 @@ const Hero = () => {
             <button className="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white text-lg font-bold px-8 py-4 rounded-xl transition-all transform hover:scale-105 shadow-lg shadow-green-200">
               Start Selling Waste <ArrowRight className="w-5 h-5" />
             </button>
-            <button className="flex items-center justify-center gap-2 bg-white border-2 border-slate-200 text-slate-700 text-lg font-bold px-8 py-4 rounded-xl hover:bg-slate-50 transition-all">
-              Browse Materials
-            </button>
+            <Link 
+                to="/materials" 
+               className="flex items-center justify-center gap-2 bg-white border-2 border-slate-200 text-slate-700 text-lg font-bold px-8 py-4 rounded-xl hover:bg-slate-50 transition-all">
+              Browse Materials 
+             </Link>
           </div>
 
           {/* Quick Stats */}
